@@ -1,0 +1,32 @@
+<button id='location-get' type="button" class="btn btn-secondary btn-lg btn-block">Get Locations</button>
+<div class="getSuccess"> </div>
+<div class="getBlank1"> </div>
+<div class="getBlank2"> </div>
+
+<h3>Create Location</h3>
+        <form class='locations' id='location-create'>
+        <div class="form-group" class="form-reset">
+          <input type="text" name="location[country]" id="location-create" placeholder="Location">
+            <input type="text" name="location[note]" id="location-create" placeholder="Note">
+        <input type="submit" name="submit" value="Submit">
+      </form>
+      <div class="createSuccess"> </div>
+      <div class="createBlank"> </div>
+
+      <h3>Update Location Notes</h3>
+      <form class='locations' id='location-update'>
+       <div class="form-group">
+         <input type="text" name="location[country]" placeholder="Location">
+         <input type="text" name="location[note]" placeholder="Note">
+       <input type="submit" name="submit" value="Submit">
+     </form>
+     <div class="updateBlank"> </div>
+     <div class="updateBlank1"> </div>
+
+      <h3>Delete Location</h3>
+        <form class='locations' id='location-delete'>
+        <div class="form-group">
+          <input type="text" name="location[id]" id="location-city-delete" placeholder="Location">
+        <input type="submit" name="submit" value="Submit">
+        <div class="deleteLocation"> </div>
+      </form>

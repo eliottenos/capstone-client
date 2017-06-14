@@ -4,6 +4,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+// @import 'cssmap-europe/cssmap-europe.css'
+
 // remove whitespace on left and right sides so navbar will run fill width
 body.container-fluid {
   padding-left: 0;
@@ -40,4 +42,8 @@ body.container-fluid {
 
 .menu {
   cursor: pointer;
+}
+
+body {
+    text-align: center;
 }
