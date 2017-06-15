@@ -4,12 +4,14 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const view = require('./view')
 const authEvents = require('./auth/events')
+const locationEvents = require('./locations/events')
 // const CSSMap = require('cssmap-europe/cssmap-europe.css')
 
 $(() => {
   setAPIOrigin(location, config)
   view.initView()
   authEvents.addHandlers()
+  locationEvents.addHandlers()
   // const loadMap = () => {
     // // $(document).ready(function () {
     // // CSSMap

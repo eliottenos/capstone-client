@@ -52,11 +52,10 @@ const onDeleteLocation = function (event) {
 }
 
 const addHandlers = () => {
-  $('#location-create').on('submit', onCreateLocation)
-  $('#location-update').on('submit', onUpdateLocation)
-  $('#location-delete').on('submit', onDeleteLocation)
-
-  $('#location-get').on('submit', onGetLocation)
+  $('.content-div2').on('submit', '#location-create', onCreateLocation)
+  $('.content-div2').on('submit', '#location-update', onUpdateLocation)
+  $('.content-div2').on('submit', '#location-delete', onDeleteLocation)
+  $('.content-div2').on('submit', '#location-get', onGetLocation)
 }
 
 module.exports = {

@@ -10,9 +10,9 @@ const createLocationSuccess = (data) => {
   $('.createBlank2').empty()
   $('.createSuccess').text('You successully created a location!')
   $('.createBlank1').text('Country: ')
-  $('.createBlank1').append($(data)[0].location.country)
+  $('.createBlank1').append($(data)[0].place.country)
   $('.createBlank2').text('Notes: ')
-  $('.createBlank2').append($(data)[0].location.notes)
+  $('.createBlank2').append($(data)[0].place.notes)
   $('.form-reset').trigger('reset')
 }
 

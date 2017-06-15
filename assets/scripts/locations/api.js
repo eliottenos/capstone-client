@@ -5,10 +5,8 @@ const config = require('../config')
 // store accesses the client global store object
 const store = require('../store')
 
-// signUp(data)
-//  POST to base_URI + '/sign-up'
-
 const createLocation = (data) => {
+  console.log('look', data)
   return $.ajax({
     url: config.apiOrigin + '/create-place',
     method: 'POST',
