@@ -13,6 +13,7 @@ const initView = () => {
   // console.log('hit render view')
   // user sign up / sign in forms
   renderView('.content-div', 'form-auth')
+  $('.map').hide()
   // add event handlers for view contoller elements
   addHandlers()
 }
@@ -81,7 +82,10 @@ const setPublicMode = () => {
 const setPrivateMode = () => {
   // closeAlert()
   renderView('.navbar-div', 'nav-private')
+  // renderView('.content-div', 'map')
   renderView('.content-div2', 'locations')
+  $('.map').show()
+  // $('.form-auth').hide()
 }
 
 //

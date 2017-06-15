@@ -43,5 +43,13 @@ body.container-fluid {
 }
 
 body {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.map {
+    display: inline-block;
+    margin: 0px auto;
     text-align: center;
 }
