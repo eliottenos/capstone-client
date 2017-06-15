@@ -1,0 +1,18 @@
+{{#each locations as |location|}}
+<h3>
+  Location:
+</h3>
+<h4>
+ {{ location.country }}
+</h4>
+<h4>
+  {{ location.note }}
+</h4>
+<button id="delete-{{ location.id }}" type="button" class="delete-location">Delete Location</button>
+<p>Update Location Notes:</p>
+<form class='locations-update' id='update-{{ location.id }}'>
+ <div class="form-group">
+   <input type="text" name="place[note]"placeholder="Note">
+ <input type="submit" name="submit" value="Submit">
+</form>
+{{/each}}

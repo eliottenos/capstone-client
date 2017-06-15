@@ -1,7 +1,8 @@
 'use strict'
 
 const store = require('../store.js')
-// const showLocationTemplate = require('../templates/locations.handlebars')
+const showLocationTemplate = require('../templates/get-locations.handlebars')
+// const onDeleteLocation = require('./events.js')
 
 const createLocationSuccess = (data) => {
   // console.log(data)
@@ -22,14 +23,9 @@ const createLocationFailure = (error) => {
 
 const getLocationSuccess = (data) => {
   console.log('this one', data)
-  console.log($(data)[0].location)
-  $('.getSuccess').empty()
-  $('.getBlank1').empty()
-  $('.getBlank2').empty()
-  $('.getSuccess').text('You successully retreived a location!')
-  $('.getBlank1').append($(data)[0].location.country)
-  $('.getBlank2').append($(data)[0].location.notes)
-  $('.form-reset').trigger('reset')
+  console.log($(data))
+  let locations = showLocationTemplate({ locations: data.places })
+  $('.getBlank1').append(locations)
 }
 
 const getLocationFailure = (error) => {
@@ -57,8 +53,8 @@ const updateLocationFailure = (error) => {
 
 const deleteLocationSuccess = (data) => {
   console.log('success delete location')
-  $('.deleteLocation').text('You deleted a location!')
-  $('.form-reset').trigger('reset')
+  // $('.getBlank1').empty()
+  $('.getBlank1').text('You deleted a location!')
 }
 
 const deleteLocationFailure = (error) => {

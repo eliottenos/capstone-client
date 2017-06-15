@@ -22,7 +22,7 @@ const getLocation = (data) => {
   console.log('api.data', data)
   console.log('api.data.id', data.id)
   return $.ajax({
-    url: config.apiOrigin + '/places/' + data.id,
+    url: config.apiOrigin + '/places/' + data,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -32,9 +32,9 @@ const getLocation = (data) => {
 }
 
 const deleteLocation = (data) => {
-  console.log('data', data)
+  console.log('delete is here', data)
   return $.ajax({
-    url: config.apiOrigin + '/destroy-place/' + data.id,
+    url: config.apiOrigin + '/destroy-place/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
