@@ -10,7 +10,7 @@ const store = require('../store')
 
 const createLocation = (data) => {
   return $.ajax({
-    url: config.apiOrigin + '/create-location',
+    url: config.apiOrigin + '/create-place',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -24,7 +24,7 @@ const getLocation = (data) => {
   console.log('api.data', data)
   console.log('api.data.id', data.id)
   return $.ajax({
-    url: config.apiOrigin + '/locations/' + data.id,
+    url: config.apiOrigin + '/places/' + data.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -36,7 +36,7 @@ const getLocation = (data) => {
 const deleteLocation = (data) => {
   console.log('data', data)
   return $.ajax({
-    url: config.apiOrigin + '/destroy-location/' + data.id,
+    url: config.apiOrigin + '/destroy-place/' + data.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -47,7 +47,7 @@ const deleteLocation = (data) => {
 
 const updateLocation = (data) => {
   return $.ajax({
-    url: config.apiOrigin + '/update-location/' + data.location.id,
+    url: config.apiOrigin + '/update-place/' + data.location.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

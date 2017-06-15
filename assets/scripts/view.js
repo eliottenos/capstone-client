@@ -1,5 +1,4 @@
 // const store = require('./store')
-const CSSMap = require('.../vendor/cssmap-europe')
 
 //
 // VIEW INITIALIZERS
@@ -83,24 +82,6 @@ const setPrivateMode = () => {
   // closeAlert()
   renderView('.navbar-div', 'nav-private')
   renderView('.content-div2', 'locations')
-  $(document).ready(function () {
-  // // CSSMap
-    $('#map-europe').CSSMap({
-      'size': 1450,
-      'tooltips': 'floating-top-center',
-      'responsive': 'auto',
-      'multipleClick': {
-        'enable': true,
-        'searchUrl': 'search.php',
-        'searchLink': 'Search',
-        'searchLinkVar': 'region',
-        'separator': '' + '',
-        'hideSearchLink': false,
-        'clicksLimit': 0
-      }
-    })
-  })
-  renderView('.content-div', 'map-europe')
 }
 
 //

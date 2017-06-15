@@ -3,7 +3,6 @@
   <head>
     <title>Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./assets/scripts/cssmap-europe/cssmap-europe.css" media="screen">
 
     <!-- Do not add `link` tags unless you know what you are doing -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -20,8 +19,13 @@
       <!-- temporary forms for front end testing -->
       <div class="temp-div"></div>
     </div>
-
-    <!-- <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script src="node_modules/datamaps/dist/datamaps.world.min.js"></script>
+<div id="container" style="position: relative; width: 500px; height: 300px;"></div>
+<script>
+    var map = new Datamap({element: document.getElementById('container')});
+</script>
     <script type="text/javascript">
 </script>
   </body>
