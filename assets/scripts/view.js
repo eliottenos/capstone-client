@@ -1,10 +1,5 @@
 // const store = require('./store')
 
-//
-// VIEW INITIALIZERS
-//
-
-// initView()
 // initializes view containers and event handlers
 
 const initView = () => {
@@ -85,6 +80,7 @@ const setPrivateMode = () => {
   // renderView('.content-div', 'map')
   renderView('.content-div2', 'locations')
   $('.map').show()
+  clearView('.content-div', 'form-auth')
   // $('.form-auth').hide()
 }
 

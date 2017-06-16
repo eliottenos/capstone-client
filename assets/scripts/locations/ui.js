@@ -2,11 +2,11 @@
 
 const store = require('../store.js')
 const showLocationTemplate = require('../templates/get-locations.handlebars')
-// const onDeleteLocation = require('./events.js')
 
 const createLocationSuccess = (data) => {
   // console.log(data)
   $('.createSuccess').empty()
+  $('.getBlank1').empty()
   $('.createBlank1').empty()
   $('.createBlank2').empty()
   $('.createSuccess').text('You successully created a location!')
@@ -15,15 +15,18 @@ const createLocationSuccess = (data) => {
   $('.createBlank2').text('Notes: ')
   $('.createBlank2').append($(data)[0].place.notes)
   $('.form-reset').trigger('reset')
+  $('#location-create').val(' ')
 }
 
 const createLocationFailure = (error) => {
   console.log('error on create location in ', error)
+  $('#location-create').val(' ')
 }
 
 const getLocationSuccess = (data) => {
-  console.log('this one', data)
-  console.log($(data))
+  $('.createSuccess').empty()
+  // console.log('this one', data)
+  // console.log($(data))
   let locations = showLocationTemplate({ locations: data.places })
   $('.getBlank1').append(locations)
 }
@@ -45,13 +48,16 @@ const updateLocationSuccess = (data) => {
   $('.updateBlank1').append($(data)[0].location.country)
   $('.updateBlank2').append($(data)[0].location.notes)
   $('.form-reset').trigger('reset')
+  $('.location-update').val(' ')
 }
 
 const updateLocationFailure = (error) => {
+  $('.location-update').val(' ')
   console.log('error on update location in ', error)
 }
 
 const deleteLocationSuccess = (data) => {
+  $('.createSuccess').empty()
   console.log('success delete location')
   // $('.getBlank1').empty()
   $('.getBlank1').text('You deleted a location!')
