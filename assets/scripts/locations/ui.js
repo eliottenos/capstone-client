@@ -59,7 +59,7 @@ const updateLocationFailure = (error) => {
 const deleteLocationSuccess = (data) => {
   $('.createSuccess').empty()
   console.log('success delete location')
-  // $('.getBlank1').empty()
+  $('.getBlank1').empty()
   $('.getBlank1').text('You deleted a location!')
 }
 
