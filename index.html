@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WorldMap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Do not add `link` tags unless you know what you are doing -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Do not add `script` tags unless you know what you are doing -->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+  <body class="container-fluid">
+    <nav class="navbar navbar-default navbar-div" role="navigation"></nav>
+    <div class="container wrapper-div">
+      <div class="content-div"></div>
+      <!-- <div class="content-div2"></div> -->
+      <!-- temporary forms for front end testing -->
+      <div class="temp-div"></div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script src="node_modules/datamaps/dist/datamaps.world.min.js"></script>
+<div class="map" id="container" style="position: relative; width: 1000px; height: 600px;"></div>
+<!-- <script>
+    var map = new Datamap({element: document.getElementById('container')});
+</script> -->
+    <script type="text/javascript">
+</script>
+<script>
+    const map = new Datamap({
+        element: document.getElementById('container'),
+        done: function(datamap) {
+            datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+                alert(geography.properties.name);
+            })
+        }
+
+    })
+</script>
+<div class="content-div2"></div>
+  </body>
+</html>
