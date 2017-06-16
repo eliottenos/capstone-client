@@ -11,24 +11,8 @@ $(() => {
   setAPIOrigin(location, config)
   view.initView()
   authEvents.addHandlers()
+  // alert('index.js file')
   locationEvents.addHandlers()
-  // const loadMap = () => {
-    // // $(document).ready(function () {
-    // // CSSMap
-    // $('#map-europe').CSSMap({
-    //     'size': 1450,
-    //     'tooltips': 'floating-top-center',
-    //     'responsive': 'auto',
-    //     'multipleClick': {
-    //       'enable': true,
-    //       'searchUrl': 'search.php',
-    //       'searchLink': 'Search',
-    //       'searchLinkVar': 'region',
-    //       'separator': '' + '',
-    //       'hideSearchLink': false,
-    //       'clicksLimit': 0
-    //     }
-    //   })
 }
 )
 
