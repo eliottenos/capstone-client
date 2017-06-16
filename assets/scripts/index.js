@@ -11,6 +11,7 @@ $(() => {
   setAPIOrigin(location, config)
   view.initView()
   authEvents.addHandlers()
+  // alert('index.js file')
   locationEvents.addHandlers()
 }
 )

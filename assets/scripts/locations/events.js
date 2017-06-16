@@ -32,6 +32,7 @@ const onGetAllLocations = function () {
 
 const onUpdateLocation = function (event) {
   event.preventDefault()
+  // alert('onUpdateLocation')
   // const place = event.target
   const data = getFormFields(event.target)
   const index = event.target.id.indexOf('-')
@@ -59,6 +60,7 @@ const onDeleteLocation = function (event) {
 
 const addHandlers = () => {
   $('.content-div2').on('submit', '#location-create', onCreateLocation)
+  // alert('events.js file')
   $('.content-div2').on('submit', '.location-update', onUpdateLocation)
   // $('.content-div2').on('click', '#location-country-delete', onDeleteLocation)
   $('.content-div2').on('click', '.delete-location', onDeleteLocation)
